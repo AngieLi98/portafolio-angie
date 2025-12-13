@@ -1,11 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>Portafolio</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top menu">
+            <div class="container-fluid">
+                <a class="navbar-brand me-auto" href="#">AL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end desplegable" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AL</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active" aria-current="page" href="#inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#proyectos">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#contactame">Contáctame</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#">CV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section id="inicio">
+            <div class="overlay">
+                <h1>Titulo</h1>
+                <p>¡Hola! Soy Angie Liceth Alarcon, soy Desarrolladora Fullstack me apasiona todo lo relacionado con la
+                    tecnología y el diseño implementados las páginas web, donde integro lo aprendido tanto personal como
+                    profesional.</p>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="skills" class="p-5">
+            <h2 class="mb-4 text-center fw-semibold">Mis Skills</h2>
+            <section class="skills d-flex flex-wrap justify-content-around gap-4">
+                <img src="./IMG/HTML.png" alt="html">
+                <img src="./IMG/CSS.png" alt="css">
+                <img src="./IMG/JS.png" alt="js">
+            </section>
+            <section class="skills d-flex flex-wrap justify-content-around gap-4 mt-4">
+                <img src="./IMG/B.png" alt="bootstrap">
+                <img src="./IMG/JAVA.png" alt="java">
+            </section>
+        </section>
+        <section id="proyectos" class="p-5">
+            <h2 class="mb-4 fw-semibold">Mis Proyectos</h2>
+            <section class="d-flex flex-wrap gap-4 justify-content-around">
+                <div class="card">
+                    <div class="h5 text-center fw-semibold card-header">
+                        ToDo
+                    </div>
+                    <img src="./IMG/imagen-todo.png" class="card-img-top" alt="imagen-todo">
+                    <div class="card-body">
+                        <p>Lista de tareas donde puedes agregar, marcar como check y borra las diferentes tareas segun
+                            lo que necesites</p>
+                        <ul class="d-flex flex-row justify-content-around gap-4 ps-0">
+                            <li><i class="bi bi-filetype-html"></i></li>
+                            <li><i class="bi bi-filetype-css"></i></li>
+                            <li><i class="bi bi-filetype-js"></i></li>
+                            <li><i class="bi bi-bootstrap"></i></li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn px-3 "><a href="">GitHub</a></button>
+                            <button type="button" class="btn px-4 "><a href="">Demo</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="h5 text-center fw-semibold card-header">
+                        Landing-page (tienda deportiva)
+                    </div>
+                    <img src="./IMG/imagen-todo.png" class="card-img-top" alt="imagen-todo">
+                    <div class="card-body">
+                        <p>Simulación de un tienda donde se agrega al carrito de compras y se guarda en el localStorage
+                        </p>
+                        <ul class="d-flex flex-row justify-content-around gap-4 ps-0">
+                            <li><i class="bi bi-filetype-html"></i></li>
+                            <li><i class="bi bi-filetype-css"></i></li>
+                            <li><i class="bi bi-filetype-js"></i></li>
+                            <li><i class="bi bi-bootstrap"></i></li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn px-3 "><a href="">GitHub</a></button>
+                            <button type="button" class="btn px-4 "><a href="">Demo</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="h5 text-center fw-semibold card-header">
+                        Poke-api
+                    </div>
+                    <img src="./IMG/imagen-todo.png" class="card-img-top" alt="imagen-todo">
+                    <div class="card-body">
+                        <p>Consumo de pokéApi, busqueda de un pokemon donde lo puede guardar a favoritos y en este
+                            eliminar uno o todos</p>
+                        <ul class="d-flex flex-row justify-content-around gap-4 ps-0">
+                            <li><i class="bi bi-filetype-html"></i></li>
+                            <li><i class="bi bi-filetype-css"></i></li>
+                            <li><i class="bi bi-filetype-js"></i></li>
+                            <li><i class="bi bi-bootstrap"></i></li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn px-3 "><a href="">GitHub</a></button>
+                            <button type="button" class="btn px-4 "><a href="">Demo</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="h5 text-center fw-semibold card-header">
+                        Nasa-apod
+                    </div>
+                    <img src="./IMG/imagen-todo.png" class="card-img-top" alt="imagen-todo">
+                    <div class="card-body">
+                        <p>Consumo de api de Nasa-apod, muestra la imagen del dia y puedes hacer la busqueda por
+                            calendario de fechas anteriores</p>
+                        <ul class="d-flex flex-row justify-content-around gap-4 ps-0">
+                            <li><i class="bi bi-filetype-html"></i></li>
+                            <li><i class="bi bi-filetype-css"></i></li>
+                            <li><i class="bi bi-filetype-js"></i></li>
+                            <li><i class="bi bi-bootstrap"></i></li>
+                        </ul>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn px-3 "><a href="">GitHub</a></button>
+                            <button type="button" class="btn px-4 "><a href="">Demo</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="contactame" class="container py-5">
+            <h2 class="mb-4 text-center fw-semibold">Contáctame</h2>
+            <form class="mx-auto">
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                        <label for="floatingInputGroup1">Nombre Completo</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGroup2" placeholder="Username">
+                        <label for="floatingInputGroup1">Correo</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
+                    <div class="form-floating">
+                        <textarea type="text" class="form-control mensaje" id="floatingInputGroup3"
+                            style="height: 100px" placeholder="Username"></textarea>
+                        <label for="floatingInputGroup1">Mensaje</label>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top pie-pagina">
+        <div class="col-md-4 d-flex flex-column align-items-center">
+            <h3>Desarrollado por: </h3>
+            <h5>Angie Liceth Alarcon Echeverri</h5>
+        </div>
+        <div class="px-3">
+            <h3>Redes Sociales</h3>
+            <ul class="col-md-4 d-flex align-items-center">
+                <li class="ms-3">
+                    <a href="https://github.com/AngieLi98"><i class="bi bi-github"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://www.linkedin.com/in/angie-alarcon-desarrolladora-frotend/">
+                          <i class="bi bi-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
