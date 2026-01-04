@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
 
+:root {
+  /* Fondos */
+  --bg-dark: #0D0C1D;
+  --bg-dark-soft: #16142E;
+  --bg-light: #F6F7FB;
+
+  /* Marca */
+  --primary: #744FC6;
+  --primary-hover: #2f1670;
+  --secondary: #4FD1C5;
+  --secondary-hover: #7FE3DC;
+
+  /* Texto */
+  --text-light: #FFFFFF;
+  --text-dark: #0D0C1D;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,21 +24,38 @@
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-.menu {
-  background-color: #744FC6 !important;
-  margin: 10px;
-  border-radius: 10px;
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
 }
 
-.navbar-brand {
-  color: white !important;
+/* menu */
+
+.menu {
+  background-color: var(--secondary) !important;
+  margin: 10px;
+  border-radius: 12px;
+}
+
+.logo-personal {
+  width: 130px;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
 }
 
 .navbar-toggler,
 .btn-close {
   border: none !important;
   font-size: 1.25rem !important;
-  background-color: #97efe9 !important;
+  background-color: var(--secondary) !important;
 }
 
 .navbar-toggler:focus,
@@ -30,14 +64,7 @@
   outline: none !important;
 }
 
-.nav-link {
-  color: #97efe9 !important;
-  font-weight: 700 !important;
-}
-
-.nav-link:hover {
-  color: #00a6fb !important;
-}
+/* seccion inicio */
 
 #inicio {
   position: relative;
@@ -50,53 +77,65 @@
 }
 
 #inicio .overlay {
-  background: #97efe9cc;
-  color: #0D0C1D;
-  font-weight: 600;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-weight: 500;
   text-align: center;
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 16px;
   max-width: 900px;
   margin: 10px;
 }
+
 #inicio h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #744FC6;
+  color: var(--secondary);
+  margin-bottom: 20px;
 }
 
+#inicio p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* seccion skills */
+
+#skills {
+  background-color: var(--bg-light);
+}
 
 .skills img {
-  width: 200px;
+  width: 180px;
   border-radius: 50%;
+  background-color: #ffffff;
+  padding: 10px;
 }
+
+/* seccion proyecto */
 
 #proyectos {
-  background-color: #744FC6;
-}
-
-h2 {
-  color: #0D0C1D !important;
+  background-color: var(--bg-dark-soft);
 }
 
 #proyectos h2 {
-  color: #97efe9 !important;
+  color: var(--text-light) !important;
   text-align: center;
 }
 
+/* cards */ 
+
 .card {
   width: 20rem;
-  background-color: #97efe9 !important;
-}
-
-.card:hover {
-  transform: scale(1.05); 
-  transition: transform 0.3s ease-in-out;
+  background-color: var(--bg-dark) !important;
+  color: var(--text-light) !important;
+  border-radius: 16px;
 }
 
 .card-header {
-  background-color: #00A6FB !important;
-  color: #ffffff !important;
+  background-color: var(--primary) !important;
+  color: var(--text-light) !important;
+  font-weight: 600;
 }
 
 .card-img-top {
@@ -104,58 +143,80 @@ h2 {
   padding-bottom: 0;
 }
 
-ul  {
+.card:hover {
+  transform: translateY(-8px);
+  transition: all 0.3s ease;
+}
+
+ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
-li i {
-  font-size: large;
+.herramienta {
+  width: 45px;
+  border-radius: 5px;
 }
 
-.btn {
-  background-color: #00A6FB !important;
+.btn-card {
+  background-color: var(--primary) !important;
+  color: var(--text-light) !important;
+  border-radius: 0 !important;
+  border: 2px solid #0D0C1D !important;
 }
 
-.btn a {
+.btn-card a {
   text-decoration: none;
-  color: #ffffff !important;
+  color: var(--text-light) !important;
 }
 
-.btn:hover {
-  background-color: #0D0C1D !important;
+.btn-card:hover, .contacto:hover {
+  background-color: var(--primary-hover) !important;
 }
+
+/* formulario */
 
 form {
   max-width: 700px;
 }
 
-input, textarea {
-  background-color: #97efe9 !important;
+input,
+textarea {
+  background-color: var(--bg-light) !important;
+  color: var(--text-dark);
+  border: 1px solid var(--primary);
 }
 
 label {
-  color: #0D0C1D !important;
+  color: var(--text-dark) !important;
 }
 
 .input-group-text {
-  background-color: #00A6FB !important;
+  background-color: var(--primary) !important;
 }
 
 .input-group-text i {
-  color: #ffffff !important;
+  color: var(--text-light) !important;
 }
 
-.pie-pagina, 
+.contacto {
+  background-color: var(--primary) !important;
+  color: var(--text-light) !important;
+}
+
+/* footer */
+
+.pie-pagina,
 .desplegable {
-  background-color: #744FC6 !important;
-  color: white !important;
+  background-color: var(--secondary) !important;
+  color: var(--text-dark) !important;
 }
 
 .redes a i {
   font-size: 2rem !important;
-  color: white;
+  color: var(--text-dark);
 }
 
 .redes a i:hover {
-  color:#97efe9;
+  color: var(--primary);
 }
