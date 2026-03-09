@@ -96,4 +96,3 @@ window.addEventListener("load", () => {
         formulario.reset();
     }
 });
-
